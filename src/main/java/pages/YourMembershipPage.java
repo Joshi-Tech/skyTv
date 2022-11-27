@@ -17,12 +17,12 @@ public class YourMembershipPage {
         driver.findElement(openVoucher).click();
     }
 
-    public void clickEnterTainment(){
-        JavascriptExecutor j = (JavascriptExecutor)driver;
-        j.executeScript("window.scrollBy(0,500)","");
+    public void clickEnterTainment() {
+        JavascriptExecutor j = (JavascriptExecutor) driver;
+        j.executeScript("window.scrollBy(0,500)", "");
         try {
             Thread.sleep(3000);
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
         driver.findElement(enterTainmentMemberShip).click();

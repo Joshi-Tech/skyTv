@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="047aa654-dc7a-4e06-95d4-f003ba477f7c" name="Changes" comment="" />
+    <list default="true" id="047aa654-dc7a-4e06-95d4-f003ba477f7c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasketSummaryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasketSummaryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CheckoutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/DrierInisializationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/DrierInisializationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/MembershipTypePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/MembershipTypePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/NowTvHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/NowTvHomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/YourMembershipPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/YourMembershipPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/MyStepdefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/MyStepdefs.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +50,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/lkjos/OneDrive/Desktop/Circle/Hello-World",
+    "last_opened_file_path": "C:/Users/lkjos/OneDrive/Desktop/Circle/NOWTV/skyTv",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -56,7 +65,7 @@
       <recent name="C:\Users\lkjos\OneDrive\Desktop\skyTv\src\main\java\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: paymentByCardJourney">
+  <component name="RunManager" selected="JUnit.TestRunner">
     <configuration name="Feature: paymentByCardJourney (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/main/java/tests/features/paymentByCardJourney.feature" />
@@ -148,9 +157,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestRunner" />
         <item itemvalue="Cucumber Java.Feature: paymentByCardJourney" />
         <item itemvalue="Cucumber Java.Scenario: Make a purchase by card" />
-        <item itemvalue="JUnit.TestRunner" />
         <item itemvalue="Cucumber Java.Feature: paymentByCardJourney (1)" />
         <item itemvalue="TestNG.JoinPageTest.joinTest (1)" />
       </list>
@@ -183,7 +192,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/pages/CheckoutPage.java</url>
-          <line>95</line>
+          <line>91</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

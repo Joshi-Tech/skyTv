@@ -14,11 +14,9 @@ public class BasketSummaryPage {
     public void clickContinueToCheckoutBtn() {
         try {
             Thread.sleep(3000);
-        }catch (Exception e){
-            
+        } catch (Exception e) {
+
         }
         driver.findElement(continueToCheckoutBtn).click();
     }
-
-
 }

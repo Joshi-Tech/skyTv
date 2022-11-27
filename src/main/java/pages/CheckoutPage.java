@@ -1,14 +1,11 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
 import java.util.function.Function;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class CheckoutPage {
     private WebDriver driver;
@@ -17,8 +14,7 @@ public class CheckoutPage {
     private final By lastName = By.id("lastName");
     private final By email = By.id("email");
     private final By cardNumber = By.id("card_number");
-
-    private final By tabCard= By.id("tab-card");
+    private final By tabCard = By.id("tab-card");
     private final By expiry = By.id("expiry");
     private final By securityCode = By.id("cvv");
     private final By terms = By.id("terms");
@@ -31,9 +27,9 @@ public class CheckoutPage {
     private final By addressDropDown = By.id("select-postcode-lookup-select-address");
     private final By address = By.xpath("//option[text()='Please Select']/following::option");
     private final By salute1 = By.xpath("//select[@id='title']/option");
-
-    private final Function<String, By> t = sirName->By.xpath(String.format("//option[@value='%s']"));
+    private final Function<String, By> t = sirName -> By.xpath(String.format("//option[@value='%s']"));
     private final By findAddressBtn = By.xpath("//*[text()='Find address']");
+
     public CheckoutPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -93,7 +89,7 @@ public class CheckoutPage {
 
     public void title(String title) {
         System.out.println(driver.findElement(t.apply(title)).getText());
-       driver.findElement(t.apply(title)).click();
+        driver.findElement(t.apply(title)).click();
     }
 
     public void clickAddressDropDown() {
@@ -109,7 +105,6 @@ public class CheckoutPage {
             }
         }
     }
-
 
     public List<WebElement> moveToFrame() {
         List<WebElement> iframe = driver.findElements(By.xpath("//iframe[@sandbox='allow-scripts allow-same-origin']"));
@@ -136,7 +131,7 @@ public class CheckoutPage {
         driver.findElement(terms).click();
     }
 
-    public void clickCardTab(){
+    public void clickCardTab() {
         driver.findElement(tabCard).click();
     }
 }

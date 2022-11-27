@@ -21,7 +21,7 @@ public class NowTvHomePage {
         driver.findElement(cookieBtn).click();
     }
 
-    public String getRandomTxt(){
-      return   driver.findElement(randomTxt).getText().trim();
+    public String getRandomTxt() {
+        return driver.findElement(randomTxt).getText().trim();
     }
 }

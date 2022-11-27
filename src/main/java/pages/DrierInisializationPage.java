@@ -4,13 +4,13 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Test;
 
 public class DrierInisializationPage {
     private WebDriver driver;
 
     NowTvHomePage nowTvHomePage = new NowTvHomePage(driver);
-    public  DrierInisializationPage (){
+
+    public DrierInisializationPage() {
         WebDriverManager driverManager = new ChromeDriverManager();
         driverManager.setup();
         driver = new ChromeDriver();
@@ -18,7 +18,7 @@ public class DrierInisializationPage {
 
     }
 
-    public NowTvHomePage nowTvHomePageAttributes(){
+    public NowTvHomePage nowTvHomePageAttributes() {
         return nowTvHomePage;
     }
 }
