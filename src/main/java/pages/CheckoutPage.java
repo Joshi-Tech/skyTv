@@ -82,25 +82,12 @@ public class CheckoutPage {
     }
 
     public void selectTitle() {
-        List<WebElement> titl = driver.findElements(saluteNew);
+        List<WebElement> title = driver.findElements(saluteNew);
         Random random = new Random();
         int num = random.nextInt(8);
         for(int i=1;i<=7;i++){
-            titl.get(num).click();
+            title.get(num).click();
         }
-
-
-        /*List<WebElement> salute = driver.findElements(salute1);
-        for (int i = 0; i < salute.size(); i++) {
-            if (salute.get(i).getText().equals(title)) {
-                salute.get(i).click();
-            }
-        }*/
-    }
-
-    public void title(String title) {
-        System.out.println(driver.findElement(t.apply(title)).getText());
-        driver.findElement(t.apply(title)).click();
     }
 
     public void clickAddressDropDown() {
