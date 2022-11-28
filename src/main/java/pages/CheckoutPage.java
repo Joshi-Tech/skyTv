@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
+import java.util.Random;
 import java.util.function.Function;
 
 public class CheckoutPage {
@@ -27,6 +28,8 @@ public class CheckoutPage {
     private final By addressDropDown = By.id("select-postcode-lookup-select-address");
     private final By address = By.xpath("//option[text()='Please Select']/following::option");
     private final By salute1 = By.xpath("//select[@id='title']/option");
+
+    private final By saluteNew = By.xpath("//option[@value]");
     private final Function<String, By> t = sirName -> By.xpath(String.format("//option[@value='%s']"));
     private final By findAddressBtn = By.xpath("//*[text()='Find address']");
 
@@ -78,13 +81,21 @@ public class CheckoutPage {
         driver.findElement(findAddressBtn).click();
     }
 
-    public void selectTitle(String title) {
-        List<WebElement> salute = driver.findElements(salute1);
+    public void selectTitle() {
+        List<WebElement> titl = driver.findElements(saluteNew);
+        Random random = new Random();
+        int num = random.nextInt(8);
+        for(int i=1;i<=7;i++){
+            titl.get(num).click();
+        }
+
+
+        /*List<WebElement> salute = driver.findElements(salute1);
         for (int i = 0; i < salute.size(); i++) {
             if (salute.get(i).getText().equals(title)) {
                 salute.get(i).click();
             }
-        }
+        }*/
     }
 
     public void title(String title) {

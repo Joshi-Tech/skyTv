@@ -88,7 +88,7 @@ public class JoinPageTest {
         }catch (Exception e){
             e.printStackTrace();
         }
-        checkoutPage.selectTitle(DetailsUtilites.getTitle());
+       // checkoutPage.selectTitle(DetailsUtilites.getTitle());
         checkoutPage.typeFirstName(DetailsUtilites.getFirstName());
         //checkoutPage.selectTitle("Mr");
        // checkoutPage.typeFirstName("Laxmi Kant");
