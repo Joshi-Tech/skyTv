@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="047aa654-dc7a-4e06-95d4-f003ba477f7c" name="Changes" comment="">
+    <list default="true" id="047aa654-dc7a-4e06-95d4-f003ba477f7c" name="Changes" comment="some commented codes deleted">
       <change afterPath="$PROJECT_DIR$/src/main/java/utilites/FakeDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CheckoutPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/steps/MyStepdefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/MyStepdefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tests/JoinPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/JoinPageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -64,6 +66,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Cucumber Java.Feature: paymentByCardJourney">
+    <configuration name="FakeDetails" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="utilites.FakeDetails" />
+      <module name="skyTv" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utilites.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Feature: paymentByCardJourney (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/main/java/tests/features/paymentByCardJourney.feature" />
@@ -135,31 +150,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JoinPageTest.joinTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="skyTv" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.JoinPageTest" />
-      <option name="METHOD_NAME" value="joinTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.Feature: paymentByCardJourney" />
+        <item itemvalue="Application.FakeDetails" />
         <item itemvalue="JUnit.TestRunner" />
         <item itemvalue="Cucumber Java.Scenario: Make a purchase by card" />
         <item itemvalue="Cucumber Java.Feature: paymentByCardJourney (1)" />
-        <item itemvalue="TestNG.JoinPageTest.joinTest (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -172,6 +169,28 @@
       <option name="presentableId" value="Default" />
       <updated>1667940434798</updated>
     </task>
+    <task id="LOCAL-00001" summary="Fake first last name added">
+      <created>1669673896308</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669673896308</updated>
+    </task>
+    <task id="LOCAL-00002" summary="FakeDetails class deleted.">
+      <created>1669674082321</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669674082321</updated>
+    </task>
+    <task id="LOCAL-00003" summary="some commented codes deleted">
+      <created>1669674728601</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669674728601</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -185,14 +204,15 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fake first last name added" />
+    <MESSAGE value="FakeDetails class deleted." />
+    <MESSAGE value="some commented codes deleted" />
+    <option name="LAST_COMMIT_MESSAGE" value="some commented codes deleted" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pages/CheckoutPage.java</url>
-          <line>102</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/tests/JoinPageTest.java</url>
           <line>84</line>
@@ -207,11 +227,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/steps/E2EPaymentByCard.java</url>
           <line>99</line>
           <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/steps/MyStepdefs.java</url>
-          <line>122</line>
-          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
