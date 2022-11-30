@@ -1,6 +1,7 @@
 package steps;
 
 import com.github.javafaker.Faker;
+import gherkin.lexer.Th;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,15 +13,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import pages.*;
+import utilites.FakeDetails;
 
 
 public class MyStepdefs {
-    private String firstName = new Faker().name().firstName();
-    private String lastName = new Faker().name().lastName();
-  //  public String password = FakeDetails.getPassword();
-    private String email = firstName+"."+lastName+"@"+"gmail.com";
-    WebDriver driver;
-    ProdcutPage prodcutPage;
+    private String password = FakeDetails.password();
+    private FakeDetails fakeDetails = new FakeDetails();
+    private String email = fakeDetails.email();
+    private WebDriver driver;
     private NowTvHomePage nowTvHomePage;
     private MembershipTypePage membershipTypePage;
     @Given("user launches Chrome Browser")
@@ -32,7 +32,7 @@ public class MyStepdefs {
     public void launching(String url) {
         WebDriverManager driverManager = new ChromeDriverManager();
         driverManager.setup();
-        driver= new ChromeDriver();
+        driver = new ChromeDriver();
         driver.get(url);
         nowTvHomePage = new NowTvHomePage(driver);
     }
@@ -51,25 +51,25 @@ public class MyStepdefs {
     @Then("click button join now")
     public void clickButtonJoinNow() {
         System.out.println(nowTvHomePage.getRandomTxt());
-        Assert.assertEquals(nowTvHomePage.getRandomTxt(),"Choose your membership");
+        Assert.assertEquals(nowTvHomePage.getRandomTxt(), "Choose your membership");
         nowTvHomePage.joinNow();
     }
     @Then("opens get title of new page")
     public void opensGetTitleOfNewPage() {
     }
-  @Then("click Entertainment Membership")
+    @Then("click Entertainment Membership")
     public void clickEntertainmentMembership() {
-      try{
-          Thread.sleep(3000);
-      }catch (Exception e){
-          e.printStackTrace();
-      }
-      membershipTypePage = new MembershipTypePage(driver);
-      membershipTypePage.clickMemberShipType();
+        try {
+            Thread.sleep(3000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        membershipTypePage = new MembershipTypePage(driver);
+        membershipTypePage.clickMemberShipType();
     }
     @Then("get title of Choose your membership")
     public void getTitleOfChooseYourMembership() {
-          System.out.println("**"+driver.getTitle());;;
+        System.out.println("**" + driver.getTitle());
     }
     @Then("click Entertainment voucher only")
     public void clickEntertainmentVoucherOnly() {
@@ -94,8 +94,9 @@ public class MyStepdefs {
 
     @Then("ensure title of the new page is NOW-Basket summary")
     public void ensureTitleOfTheNewPageIsNOWBasketSummary() {
-        Assert.assertEquals(driver.getTitle(),"NOW - Basket summary");
+        Assert.assertEquals(driver.getTitle(), "NOW - Basket summary");
     }
+
     @Then("click to CTA Continue to checkout")
     public void clickToCTAContinueToCheckout() {
         BasketSummaryPage basketSummaryPage = new BasketSummaryPage(driver);
@@ -105,68 +106,63 @@ public class MyStepdefs {
     public void ensureTitleOfTheNewPageIsNOWCheckout() {
         try {
             Thread.sleep(5000);
-        }catch (Exception e){
+        } catch (Exception e) {
         }
-        Assert.assertEquals(driver.getTitle(),"NOW - Checkout");
+        Assert.assertEquals(driver.getTitle(), "NOW - Checkout");
     }
     @Then("enter title")
     public void enterTitle() {
-        CheckoutPage checkoutPage= new CheckoutPage(driver);
+        CheckoutPage checkoutPage = new CheckoutPage(driver);
         checkoutPage.clickTitleDropDown();
         try {
             Thread.sleep(3000);
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
         checkoutPage.selectTitle();
     }
     @And("First name")
     public void firstName() {
-        CheckoutPage checkoutPage= new CheckoutPage(driver);
-        checkoutPage.typeFirstName(new Faker().name().firstName());
+        CheckoutPage checkoutPage = new CheckoutPage(driver);
+        checkoutPage.typeFirstName(fakeDetails.firstName());
     }
     @And("Last name")
     public void lastName() {
-        CheckoutPage checkoutPage= new CheckoutPage(driver);
-        checkoutPage.typeLastName(new Faker().name().lastName());
+        CheckoutPage checkoutPage = new CheckoutPage(driver);
+        checkoutPage.typeLastName(fakeDetails.lastName());
     }
-
     @And("Email")
     public void email() {
-        CheckoutPage checkoutPage= new CheckoutPage(driver);
+        CheckoutPage checkoutPage = new CheckoutPage(driver);
         checkoutPage.typeEmail(email);
     }
-
     @Then("confirmEmail")
     public void confirmEmail() {
         CheckoutPage checkoutPage = new CheckoutPage(driver);
         checkoutPage.typeConfirmEmail(email);
     }
+
     @And("password")
     public void password() {
-        CheckoutPage checkoutPage= new CheckoutPage(driver);
-        checkoutPage.typePassword("test12345");
-       // checkoutPage.typePassword(password);
+        CheckoutPage checkoutPage = new CheckoutPage(driver);
+        checkoutPage.typePassword(password);
     }
 
     @Then("confirmPassword")
     public void confirmpassword() {
-        CheckoutPage checkoutPage= new CheckoutPage(driver);
-        checkoutPage.typeConfirmPassword("test12345");
-        //checkoutPage.typeConfirmPassword(password);
+        CheckoutPage checkoutPage = new CheckoutPage(driver);
+        checkoutPage.typeConfirmPassword(password);
     }
-
 
     @Then("click CTA Next")
     public void clickCTANext() {
         try {
             Thread.sleep(3000);
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
         CheckoutPage checkoutPage = new CheckoutPage(driver);
         checkoutPage.clickNext();
-
     }
 
     @Then("Enter postcode")
@@ -185,11 +181,11 @@ public class MyStepdefs {
     public void clickAddressDropdown() {
         try {
             Thread.sleep(3000);
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
-    CheckoutPage checkoutPage = new CheckoutPage(driver);
-    checkoutPage.clickAddressDropDown();
+        CheckoutPage checkoutPage = new CheckoutPage(driver);
+        checkoutPage.clickAddressDropDown();
     }
 
     @Then("click address")
@@ -198,19 +194,18 @@ public class MyStepdefs {
         checkoutPage.clickAddress("226");
     }
 
-
     @Then("click Next in Address Form")
     public void clickNextInAddressForm() {
         try {
             Thread.sleep(3000);
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
-        JavascriptExecutor j = (JavascriptExecutor)driver;
-        j.executeScript("window.scrollBy(0,300)","");
+        JavascriptExecutor j = (JavascriptExecutor) driver;
+        j.executeScript("window.scrollBy(0,300)", "");
         try {
             Thread.sleep(3000);
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
         CheckoutPage checkoutPage = new CheckoutPage(driver);
@@ -226,19 +221,24 @@ public class MyStepdefs {
     @Then("Enter card number")
     public void enterCardNumber() {
         CheckoutPage checkoutPage = new CheckoutPage(driver);
-        checkoutPage.getCardNumber("5555444433331111");
+        checkoutPage.getCardNumber(fakeDetails.cardNumber());
     }
 
     @Then("Expiry date")
     public void expiryDate() {
+        try {
+            Thread.sleep(4000);
+        } catch (Exception e) {
+
+        }
         CheckoutPage checkoutPage = new CheckoutPage(driver);
-        checkoutPage.getExpiry("03/30");
+        checkoutPage.getExpiry(fakeDetails.cardExpiry());
     }
 
     @Then("cvv")
     public void cvv() {
         CheckoutPage checkoutPage = new CheckoutPage(driver);
-        checkoutPage.getSecurityCode("373");
+        checkoutPage.getSecurityCode(fakeDetails.cardCVV());
     }
 
     @Then("click Terms of use")
@@ -246,16 +246,4 @@ public class MyStepdefs {
         CheckoutPage checkoutPage = new CheckoutPage(driver);
         checkoutPage.clickTermChkBx();
     }
-
-
-
-
-
-
-
-   /* @Then("click checkout")
-    public void clickCheckout() {
-        CheckoutPage checkoutPage = new CheckoutPage(driver);
-        checkoutPage.c
-    }*/
 }
