@@ -39,5 +39,13 @@ public class FakeDetails {
     public String cardCVV(){
         return fake().address().zipCode().substring(0,3);
     }
+
+    public String postalCode(){
+        return "UB4 8SH";
+    }
+
+    public String firstLineOfAddress(){
+        return "226";
+    }
     
 }

@@ -28,7 +28,6 @@ public class CheckoutPage {
     private final By addressDropDown = By.id("select-postcode-lookup-select-address");
     private final By address = By.xpath("//option[text()='Please Select']/following::option");
     private final By salute1 = By.xpath("//select[@id='title']/option");
-
     private final By saluteNew = By.xpath("//option[@value]");
     private final Function<String, By> t = sirName -> By.xpath(String.format("//option[@value='%s']"));
     private final By findAddressBtn = By.xpath("//*[text()='Find address']");
@@ -85,7 +84,7 @@ public class CheckoutPage {
         List<WebElement> title = driver.findElements(saluteNew);
         Random random = new Random();
         int num = random.nextInt(8);
-        for(int i=1;i<=7;i++){
+        for (int i = 1; i <= 7; i++) {
             title.get(num).click();
         }
     }
@@ -124,11 +123,9 @@ public class CheckoutPage {
         driver.findElement(securityCode).sendKeys(cvv);
         driver.switchTo().defaultContent();
     }
-
     public void clickTermChkBx() {
         driver.findElement(terms).click();
     }
-
     public void clickCardTab() {
         driver.findElement(tabCard).click();
     }
