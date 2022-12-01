@@ -168,7 +168,7 @@ public class MyStepdefs {
     @Then("Enter postcode")
     public void enterPostcode() {
         CheckoutPage checkoutPage = new CheckoutPage(driver);
-        checkoutPage.typePostCode("UB4 8SH");
+        checkoutPage.typePostCode(fakeDetails.postalCode());
     }
 
     @And("click Find address")
@@ -191,7 +191,7 @@ public class MyStepdefs {
     @Then("click address")
     public void clickAddress() {
         CheckoutPage checkoutPage = new CheckoutPage(driver);
-        checkoutPage.clickAddress("226");
+        checkoutPage.clickAddress(fakeDetails.firstLineOfAddress());
     }
 
     @Then("click Next in Address Form")
